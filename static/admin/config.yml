@@ -1,4 +1,4 @@
-backend:
+backend: agohorel/portfolio-v2
   name: test-repo
 media_folder: static/assets
 public_folder: /assets
