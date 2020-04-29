@@ -1,3 +1,9 @@
 import React from "react"
 
-export default () => <div>Hello world!</div>
+import Sketch from "../components/Sketch"
+
+export default () => (
+  <div>
+    <Sketch></Sketch>
+  </div>
+)
