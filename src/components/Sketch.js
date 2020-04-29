@@ -10,8 +10,8 @@ export default class Sketch extends Component {
   Sketch = p => {
     p5.disableFriendlyErrors = true
 
-    let scale = 15
-    let inc = 0.025
+    let scale = 20
+    let inc = 0.01
     let zoff = 0
     let cols, rows
 
@@ -30,17 +30,18 @@ export default class Sketch extends Component {
     }
 
     p.perlinGrid = () => {
-      p.stroke(0)
       p.strokeWeight(0.1)
       let yoff = 0
 
-      for (let y = 0; y < rows; y++) {
+      for (let y = 0; y <= rows; y++) {
         let xoff = 0
-        for (let x = 0; x < cols; x++) {
+        for (let x = 0; x <= cols; x++) {
           xoff += inc
           let angle = p.noise(xoff, yoff, zoff) * p.TWO_PI
           let v = p5.Vector.fromAngle(angle)
+          let col = p.map(p.degrees(angle), 0, 360, 0, 255)
 
+          p.stroke(col)
           p.push()
           p.translate(x * scale, y * scale)
           p.rotate(v.heading())
@@ -49,7 +50,7 @@ export default class Sketch extends Component {
         }
         yoff += inc
         zoff += 0.0001
-        inc = p.noise(yoff, zoff) * 0.1
+        inc = p.noise(yoff, zoff) * 0.15
       }
     }
   }
