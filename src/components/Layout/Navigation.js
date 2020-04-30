@@ -7,19 +7,16 @@ export const Navigation = () => {
   return (
     <NavContainer>
       <Nav>
-        <Link to="/">works</Link>
-        <Link to="/">blog</Link>
-        <Link to="/">about</Link>
-        <Link to="/">contact</Link>
+        <Link to="/">WORKS</Link>
+        <Link to="/">BLOG</Link>
+        <Link to="/">ABOUT</Link>
+        <Link to="/">CONTACT</Link>
       </Nav>
     </NavContainer>
   )
 }
 
 const NavContainer = styled.div`
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
   padding: 2rem;
 `
 
