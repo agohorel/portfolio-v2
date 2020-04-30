@@ -8,9 +8,6 @@ export const Header = () => {
 }
 
 const Type = styled.h1`
-  padding: 2.6rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: 2rem;
   font-size: 2.2rem;
 `
