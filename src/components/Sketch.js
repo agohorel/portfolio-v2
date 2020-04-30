@@ -2,7 +2,6 @@ import React, { Component, createRef } from "react"
 let p5
 
 if (typeof window !== `undefined`) {
-  // p5 = require("p5")
   p5 = require("p5/lib/p5.min")
 }
 
@@ -57,6 +56,10 @@ export default class Sketch extends Component {
         zoff += 0.0001
         inc = p.noise(yoff, zoff) * 0.15
       }
+    }
+
+    p.windowResized = () => {
+      p.resizeCanvas(p.windowWidth / 2, p.windowHeight / 2)
     }
   }
 
