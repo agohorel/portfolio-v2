@@ -2,7 +2,8 @@ import React, { Component, createRef } from "react"
 let p5
 
 if (typeof window !== `undefined`) {
-  p5 = require("p5")
+  // p5 = require("p5")
+  p5 = require("p5/lib/p5.min")
 }
 
 export default class Sketch extends Component {
