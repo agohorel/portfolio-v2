@@ -1,5 +1,9 @@
 import React, { Component, createRef } from "react"
-import p5 from "p5"
+let p5
+
+if (typeof window !== `undefined`) {
+  p5 = require("p5")
+}
 
 export default class Sketch extends Component {
   constructor(props) {
