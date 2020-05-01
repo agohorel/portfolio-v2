@@ -25,4 +25,11 @@ const LayoutContainer = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 75%,
+    rgba(255, 255, 255, 0)
+  );
 `
