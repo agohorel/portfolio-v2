@@ -21,9 +21,35 @@
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Jetbrains Mono";
+}
+
+:root {
+  overflow-y: scroll;
+  scrollbar-color: #4b4b4b #191919;
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #191919;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 1.2rem;
+  background-color: #4b4b4b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 1.2rem;
+  background-color: #5b5b5b;
+}
+
+::selection {
+  background: #191919;
+  color: #e6e6e6;
 }
