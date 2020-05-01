@@ -11,33 +11,31 @@ import {
 export const FooterLinks = () => {
   return (
     <Container>
-      <Container>
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
-          <Icon icon={faGithubSquare}></Icon>
-        </IconLink>
+      <IconLink href="#" target="_blank" rel="noopener noreferrer">
+        <Icon icon={faGithubSquare}></Icon>
+      </IconLink>
 
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
-          <Icon icon={faLinkedin}></Icon>
-        </IconLink>
+      <IconLink href="#" target="_blank" rel="noopener noreferrer">
+        <Icon icon={faLinkedin}></Icon>
+      </IconLink>
 
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
-          <Icon icon={faTwitterSquare}></Icon>
-        </IconLink>
+      <IconLink href="#" target="_blank" rel="noopener noreferrer">
+        <Icon icon={faTwitterSquare}></Icon>
+      </IconLink>
 
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
-          <Icon icon={faInstagramSquare}></Icon>
-        </IconLink>
-      </Container>
+      <IconLink href="#" target="_blank" rel="noopener noreferrer">
+        <Icon icon={faInstagramSquare}></Icon>
+      </IconLink>
     </Container>
   )
 }
 
 const Container = styled.div`
-  position: absolute;
+  position: sticky;
   bottom: 0;
-  right: 0;
   padding: 2rem;
   display: flex;
+  justify-content: flex-end;
 `
 
 const Icon = styled(FontAwesomeIcon)`
