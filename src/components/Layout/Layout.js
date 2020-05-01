@@ -23,6 +23,7 @@ const LayoutContainer = styled.div`
 `
 
 const HeaderContainer = styled.div`
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   position: sticky;
