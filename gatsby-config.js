@@ -1,12 +1,19 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const netlifyCMSPath = {
+  resolve: "gatsby-plugin-netlify-cms-paths",
+  options: {
+    cmsConfig: "/static/admin/config.yml",
+  },
+}
 
 module.exports = {
-  /* Your site config here */
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/static/assets`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -14,7 +21,24 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+    netlifyCMSPath,
+    `gatsby-transformer-sharp`,
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          netlifyCMSPath,
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 600,
+              backgroundColor: "transparent",
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-netlify-cms",
-    "gatsby-transformer-remark",
   ],
 }
