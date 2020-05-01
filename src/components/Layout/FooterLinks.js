@@ -31,8 +31,9 @@ export const FooterLinks = () => {
 }
 
 const Container = styled.div`
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  right: 0;
   padding: 2rem;
   display: flex;
   justify-content: flex-end;
