@@ -46,6 +46,7 @@ const BlogPost = styled.div`
   flex-direction: column;
   align-items: center;
   width: 50%;
+  transition: 0.2s ease-out width;
 
   h1 {
     font-size: 3rem;
@@ -76,10 +77,24 @@ const BlogPost = styled.div`
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
+
+  @media (max-width: 900px) {
+    width: 67%;
+  }
+
+  @media (max-width: 700px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: calc(100% - 4rem);
+  }
 `
 
 const BlogHeader = styled.div`
   align-self: flex-start;
 `
 
-const BlogContent = styled.div``
+const BlogContent = styled.div`
+  width: 100%;
+`
