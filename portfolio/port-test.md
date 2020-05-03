@@ -14,12 +14,12 @@ backend_tools:
   - express
   - knex
   - postgres
-frontend_tool:
+frontend_tools:
   - react
   - redux
   - styled-components
 other_tools:
   - raspberry pi
-live_site: www.aleph.zone
-repo: www.github.com/agohorel/aleph
+demo_url: www.aleph.zone
+repo_url: www.github.com/agohorel/aleph
 ---

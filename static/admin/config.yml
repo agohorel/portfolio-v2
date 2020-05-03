@@ -25,7 +25,7 @@ collections:
       - { name: name, label: Name }
       - { name: description, label: Description, widget: markdown }
       - { name: backend_tools, label: Backend Tools, widget: list }
-      - { name: frontend_tool, label: Frontend Tools, widget: list }
+      - { name: frontend_tools, label: Frontend Tools, widget: list }
       - { name: other_tools, label: Other Tools, widget: list }
-      - { name: live_site, label: Live Site URL }
-      - { name: repo, label: Repo URL }
+      - { name: demo_url, label: Demo URL }
+      - { name: repo_url, label: Repo URL }
