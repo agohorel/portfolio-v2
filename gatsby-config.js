@@ -17,8 +17,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "markdown-pages",
+        name: "blog",
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "portfolio",
+        path: `${__dirname}/portfolio`,
       },
     },
     netlifyCMSPath,
