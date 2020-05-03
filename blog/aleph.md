@@ -1,4 +1,5 @@
 ---
+type: blog
 path: /aleph
 date: 2020-05-01T17:28:03.861Z
 title: aleph
