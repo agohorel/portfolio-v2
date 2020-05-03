@@ -25,8 +25,8 @@ const Card = styled.div`
   border-radius: 4px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
   padding: 2rem;
-  width: calc(33% - 4rem);
-  margin: 2rem;
+  width: calc(33% - 8rem);
+  margin: 4rem;
 `
 const Image = styled.div`
   background-color: #9c9c9c;
