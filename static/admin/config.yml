@@ -13,3 +13,17 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: portfolio
+    label: Portfolio
+    folder: portfolio
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: name, label: Name }
+      - { name: description, label: Description, widget: markdown }
+      - { name: backend_tools, label: Backend Tools, widget: list }
+      - { name: frontend_tool, label: Frontend Tools, widget: list }
+      - { name: other_tools, label: Other Tools, widget: list }
+      - { name: live_site, label: Live Site URL }
+      - { name: repo, label: Repo URL }
