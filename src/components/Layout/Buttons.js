@@ -10,9 +10,13 @@ export const ButtonLink = ({ children: text, path }) => {
   return <StyledButtonLink to={path}>{text}</StyledButtonLink>
 }
 
-export const ButtonExternalLink = ({ children: text }) => {
+export const ButtonExternalLink = ({ children: text, href }) => {
   return (
-    <StyledButtonExternalLink target="_blank" rel="noreferrer noopener">
+    <StyledButtonExternalLink
+      href={href}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
       {text}
     </StyledButtonExternalLink>
   )

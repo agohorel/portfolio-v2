@@ -20,6 +20,6 @@ frontend_tools:
   - styled-components
 other_tools:
   - raspberry pi
-demo_url: www.aleph.zone
-repo_url: www.github.com/agohorel/aleph
+demo_url: https://www.aleph.zone
+repo_url: https://www.github.com/agohorel/aleph
 ---
