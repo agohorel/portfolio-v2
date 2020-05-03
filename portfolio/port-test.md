@@ -1,4 +1,5 @@
 ---
+type: portfolio
 path: /port-test
 date: 2020-05-03T19:02:04.920Z
 name: portfolio test
