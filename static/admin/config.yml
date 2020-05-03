@@ -9,6 +9,7 @@ collections:
     folder: blog
     create: true
     fields:
+      - { name: type, label: Post Type, default: "blog" }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
@@ -18,6 +19,7 @@ collections:
     folder: portfolio
     create: true
     fields:
+      - { name: type, label: Post Type, default: "portfolio" }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: name, label: Name }
