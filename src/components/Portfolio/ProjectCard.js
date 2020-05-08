@@ -27,6 +27,13 @@ const Card = styled.div`
   padding: 2rem;
   width: calc(33% - 8rem);
   margin: 4rem;
+  transition: .2s ease-out all;
+  transition-property: transform, box-shadow;
+  
+  :hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
 `
 const Image = styled.div`
   background-color: #9c9c9c;
