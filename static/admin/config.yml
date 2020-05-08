@@ -29,3 +29,5 @@ collections:
       - { name: other_tools, label: Other Tools, widget: list }
       - { name: demo_url, label: Demo URL }
       - { name: repo_url, label: Repo URL }
+      - { name: thumbnail, label: Thumbnail, widget: image}
+      - { name: gallery, label: Gallery, widget: list, field: {name: image, label: Image, widget: image}}
