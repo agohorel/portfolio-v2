@@ -1,9 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 
+import { StyledLink } from "../../styles/common"
+
 export const Header = () => {
   return (
-    <Type>ALEX GOHOREL | FULL STACK DEVELOPER &amp; AUDIOVISUAL DESIGNER</Type>
+    <StyledLink to="/">
+      <Type>
+        ALEX GOHOREL | FULL STACK DEVELOPER &amp; AUDIOVISUAL DESIGNER
+      </Type>
+    </StyledLink>
   )
 }
 
