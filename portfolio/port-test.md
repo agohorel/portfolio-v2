@@ -3,6 +3,7 @@ type: portfolio
 path: /port-test
 date: 2020-05-03T19:02:04.920Z
 name: portfolio test
+thumbnail: /assets/cover.jpg
 description: |-
   lalalala some markdown\
   \
@@ -22,4 +23,6 @@ other_tools:
   - raspberry pi
 demo_url: https://www.aleph.zone
 repo_url: https://www.github.com/agohorel/aleph
+Image:
+  - /assets/aleph_vectors.png
 ---
