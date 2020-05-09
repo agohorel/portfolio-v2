@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 import { ButtonLink, ButtonExternalLink } from "../Layout/Buttons"
 import { ToolsUsed } from "../Portfolio/ToolsUsed"
@@ -9,7 +10,7 @@ export const ProjectCard = ({ data }) => {
   console.log(project)
   return (
     <Card>
-      <Image></Image>
+      <Image fluid={project.thumbnail?.childImageSharp.fluid}></Image>
       <Name>{project.name}</Name>
       <ToolsUsed project={project}></ToolsUsed>
       <ButtonContainer>
@@ -35,7 +36,7 @@ const Card = styled.div`
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   }
 `
-const Image = styled.div`
+const Image = styled(Img)`
   background-color: #9c9c9c;
   width: 100%;
   height: 200px;

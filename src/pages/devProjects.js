@@ -33,6 +33,13 @@ export const pageQuery = graphql`
           frontend_tools
           other_tools
           path
+          thumbnail {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
         id
       }
