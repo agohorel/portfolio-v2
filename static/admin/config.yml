@@ -30,4 +30,4 @@ collections:
       - { name: other_tools, label: Other Tools, widget: list }
       - { name: demo_url, label: Demo URL }
       - { name: repo_url, label: Repo URL }
-      - { name: Image, label: Gallery, widget: list, field: {name: image, label: Image, widget: image}}
+      - { name: image, label: Gallery, widget: list, field: {name: image, label: Image, widget: image}}

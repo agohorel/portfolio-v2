@@ -23,6 +23,6 @@ other_tools:
   - raspberry pi
 demo_url: https://www.aleph.zone
 repo_url: https://www.github.com/agohorel/aleph
-Image:
+image:
   - /assets/aleph_vectors.png
 ---
