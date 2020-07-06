@@ -42,7 +42,7 @@ export default function projectTemplate({ data }) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <Icon repo-icon="true" icon={faCodeBranch}></Icon>
+                <Icon repoicon icon={faCodeBranch}></Icon>
                 repo
               </Link>
             </div>
@@ -71,11 +71,13 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 1.4rem;
+  margin-bottom: 4rem;
 `
 
 const Links = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 4rem;
 `
 
 const Link = styled(ExtLink)`
@@ -86,8 +88,8 @@ const Link = styled(ExtLink)`
 `
 
 const Icon = styled(FontAwesomeIcon)`
-  margin-left: ${props => (props.repoIcon ? "10px" : "2px")};
-  margin-right: ${props => (props.repoIcon ? "1.35rem" : "1rem")};
+  margin-left: ${props => (props.repoicon ? "10px" : "2px")};
+  margin-right: ${props => (props.repoicon ? "1.35rem" : "1rem")};
   padding: 2px;
 `
 
@@ -100,10 +102,10 @@ export const pageQuery = graphql`
         repo_url
         backend_tools
         frontend_tools
+        other_tools
         description
         demo_url
         name
-        other_tools
         path
         thumbnail {
           childImageSharp {
