@@ -1,28 +1,28 @@
 ---
 type: portfolio
-path: /port-test
+path: /aleph
 date: 2020-05-03T19:02:04.920Z
-name: portfolio test
-thumbnail: /assets/cover.jpg
-description: |-
-  lalalala some markdown\
-  \
-  *ooohhh yeaaaah*
+name: aleph
+thumbnail: /assets/aleph.png
+description: >-
+  Aleph is a cross-platform desktop application and programming framework
+  designed for developing and performing audio-reactive visuals using browser
+  technologies. Originally built with Processing, a descendant of Java, Aleph
+  was rebuilt with p5.js and Electron to tap into the robust ecosystem of web
+  technologies and to make it more accessible to users.
 
-  `a code block, sick`
+
+  Aleph leverages the simplicity of working with HTML Canvas and WebGL that p5.js provides, wraps it in a self-contained app with loads of helpful utilities designed to accelerate development, and provides a custom MIDI implementation that allows for expressive live performances.
 backend_tools:
+  - electron
   - node.js
-  - express
-  - knex
-  - postgres
 frontend_tools:
-  - react
-  - redux
-  - styled-components
+  - p5.js
+  - vanilla javascript
 other_tools:
-  - raspberry pi
+  - ""
 demo_url: https://www.aleph.zone
 repo_url: https://www.github.com/agohorel/aleph
 image:
-  - /assets/aleph_vectors.png
+  - /assets/aleph-screencap.png
 ---
