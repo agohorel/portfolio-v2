@@ -51,6 +51,7 @@ collections:
     folder: about
     create: true
     fields:
-      - { name: title, label: Title }
-      - { name: description, label: Description }
+      - { name: type, label: Post Type, default: about }
+      - { name: path, label: Path }
+      - { name: bio, label: Bio }
       - { name: portrait, label: Portrait, widget: image }
