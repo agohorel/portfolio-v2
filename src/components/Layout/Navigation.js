@@ -7,7 +7,7 @@ export const Navigation = () => {
   return (
     <NavContainer>
       <Nav>
-        <Link to="/">WORKS</Link>
+        <Link to="/projects">WORKS</Link>
         <Link to="/">BLOG</Link>
         <Link to="/">ABOUT</Link>
         <Link to="/">CONTACT</Link>
