@@ -53,4 +53,4 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: description, label: Description }
-      - { name: image, label: Image, widget: image }
+      - { name: portrait, label: Portrait, widget: image }
