@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const ToolsUsed = ({ project, size = "default" }) => {
   return (
     <Tools>
-      {project.frontend_tools.length && (
+      {project.frontend_tools[0] !== "" && (
         <Column>
           <ListItem size={size} color="light">
             &#8260;&#8260;frontend_tools
@@ -17,7 +17,7 @@ export const ToolsUsed = ({ project, size = "default" }) => {
         </Column>
       )}
 
-      {project.backend_tools.length && (
+      {project.backend_tools[0] !== "" && (
         <Column>
           <ListItem size={size} color="light">
             &#8260;&#8260;backend_tools
@@ -30,7 +30,7 @@ export const ToolsUsed = ({ project, size = "default" }) => {
         </Column>
       )}
 
-      {project.other_tools.length && (
+      {project.other_tools[0] !== "" && (
         <Column>
           <ListItem size={size} color="light">
             &#8260;&#8260;other_tools
