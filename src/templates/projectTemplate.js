@@ -42,7 +42,7 @@ export default function projectTemplate({ data }) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <Icon icon={faCodeBranch}></Icon>
+                <Icon repoIcon icon={faCodeBranch}></Icon>
                 repo
               </Link>
             </div>
@@ -86,7 +86,8 @@ const Link = styled(ExtLink)`
 `
 
 const Icon = styled(FontAwesomeIcon)`
-  margin-right: 1rem;
+  margin-left: ${props => (props.repoIcon ? "10px" : "2px")};
+  margin-right: ${props => (props.repoIcon ? "1.35rem" : "1rem")};
   padding: 2px;
 `
 
