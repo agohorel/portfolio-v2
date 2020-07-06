@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const StyledLink = styled(Link)`
+const linkStyle = `
   text-decoration: none;
   color: black;
   font-size: 2rem;
@@ -10,4 +10,11 @@ export const StyledLink = styled(Link)`
     color: #3c3c3c;
     text-decoration: line-through;
   }
+`
+
+export const StyledLink = styled(Link)`
+  ${linkStyle}
+`
+export const ExtLink = styled.a`
+  ${linkStyle}
 `
