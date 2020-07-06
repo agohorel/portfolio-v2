@@ -51,5 +51,6 @@ collections:
     folder: about
     create: true
     fields:
+      - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: image, label: Image, widget: image }
