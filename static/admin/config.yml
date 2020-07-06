@@ -25,9 +25,9 @@ collections:
       - { name: name, label: Name }
       - { name: thumbnail, label: Thumbnail, widget: image}
       - { name: description, label: Description, widget: markdown }
-      - { name: backend_tools, label: Backend Tools, widget: list }
-      - { name: frontend_tools, label: Frontend Tools, widget: list }
-      - { name: other_tools, label: Other Tools, widget: list }
+      - { name: backend_tools, label: Backend Tools, widget: list, required: false }
+      - { name: frontend_tools, label: Frontend Tools, widget: list, required: false }
+      - { name: other_tools, label: Other Tools, widget: list, required: false }
       - { name: demo_url, label: Demo URL }
       - { name: repo_url, label: Repo URL }
       - { name: image, label: Gallery, widget: list, field: {name: image, label: Image, widget: image}}
