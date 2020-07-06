@@ -42,7 +42,7 @@ export default function projectTemplate({ data }) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <Icon repoIcon icon={faCodeBranch}></Icon>
+                <Icon repo-icon="true" icon={faCodeBranch}></Icon>
                 repo
               </Link>
             </div>
