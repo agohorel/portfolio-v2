@@ -28,6 +28,13 @@ module.exports = {
         path: `${__dirname}/portfolio`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "about",
+        path: `${__dirname}/about`,
+      },
+    },
     netlifyCMSPath,
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
