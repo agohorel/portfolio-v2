@@ -16,6 +16,7 @@ export const ToolsUsed = ({ project, size = "default" }) => {
           ))}
         </Column>
       )}
+      {project.frontend_tools[0] === "" && <Column></Column>}
 
       {project.backend_tools[0] !== "" && (
         <Column>
@@ -29,6 +30,7 @@ export const ToolsUsed = ({ project, size = "default" }) => {
           ))}
         </Column>
       )}
+      {project.backend_tools[0] === "" && <Column></Column>}
 
       {project.other_tools[0] !== "" && (
         <Column>
@@ -42,6 +44,7 @@ export const ToolsUsed = ({ project, size = "default" }) => {
           ))}
         </Column>
       )}
+      {project.other_tools[0] === "" && <Column></Column>}
     </Tools>
   )
 }
@@ -49,14 +52,12 @@ export const ToolsUsed = ({ project, size = "default" }) => {
 const Tools = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0 1rem 0;
+  margin: ${props =>
+    props.size === "large" ? "1rem 0 1rem 0" : "1rem 0 5rem 0"};
 `
 
-const Column = styled.div``
-
-const ListTitle = styled.p`
-  font-size: 1.2rem;
-  color: #9c9c9c;
+const Column = styled.div`
+  min-width: 23%;
 `
 
 const ListItem = styled.p`
