@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import colors from "./colors"
 
 const linkStyle = `
   text-decoration: none;
@@ -17,4 +18,29 @@ export const StyledLink = styled(Link)`
 `
 export const ExtLink = styled.a`
   ${linkStyle}
+`
+
+export const Centered = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const PageTitle = styled.h1`
+  padding-top: 4rem;
+`
+
+export const StyledButton = styled.button`
+  display: inline-block;
+  padding: 1rem 2rem;
+  min-width: 10rem;
+  background-color: ${colors.midgrey};
+  color: ${colors.offwhite};
+  border: none;
+  transition: 0.2s ease all;
+
+  :hover {
+    cursor: pointer;
+    background-color: ${colors.darkgrey};
+  }
 `
