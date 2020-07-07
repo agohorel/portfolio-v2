@@ -7,10 +7,12 @@ import { ToolsUsed } from "../Portfolio/ToolsUsed"
 
 export const ProjectCard = ({ data }) => {
   const { frontmatter: project } = data
-  console.log(project)
+
   return (
     <Card>
-      <Image fluid={project.thumbnail?.childImageSharp.fluid}></Image>
+      <ImageContainer>
+        <Image fluid={project.thumbnail?.childImageSharp.fluid}></Image>
+      </ImageContainer>
       <Name>{project.name}</Name>
       <ToolsUsed project={project}></ToolsUsed>
       <ButtonContainer>
@@ -23,23 +25,36 @@ export const ProjectCard = ({ data }) => {
 }
 
 const Card = styled.div`
+  position: relative;
   border-radius: 4px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
   padding: 2rem;
   width: calc(33% - 8rem);
   margin: 4rem;
-  transition: .2s ease-out all;
+  transition: 0.2s ease-out all;
   transition-property: transform, box-shadow;
-  
+
   :hover {
     transform: translateY(-3px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   }
 `
-const Image = styled(Img)`
-  background-color: #9c9c9c;
+
+const ImageContainer = styled.div`
   width: 100%;
   height: 200px;
+  overflow: hidden;
+`
+
+const Image = styled(Img)`
+  width: 100%;
+  height: 100%;
+  background-color: #9c9c9c;
+  transition: 0.2s ease-out transform;
+
+  :hover {
+    transform: scale(1.35);
+  }
 `
 
 const Name = styled.h3`
@@ -48,6 +63,9 @@ const Name = styled.h3`
 `
 
 const ButtonContainer = styled.div`
+  width: calc(100% - 40px);
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
 `
