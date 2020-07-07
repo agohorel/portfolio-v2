@@ -50,6 +50,5 @@ export const pageQuery = graphql`
 const ProjectCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding: 4rem 8rem;
 `
