@@ -37,6 +37,11 @@ const Container = styled.div`
   padding: 2rem;
   display: flex;
   justify-content: flex-end;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
 `
 
 const Icon = styled(FontAwesomeIcon)`
