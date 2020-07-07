@@ -35,7 +35,7 @@ export const pageQuery = graphql`
           path
           thumbnail {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 800, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
