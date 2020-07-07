@@ -12,7 +12,11 @@ export default function about({ data }) {
   return (
     <Layout>
       <Container>
-        <Portrait fluid={portrait}></Portrait>
+        <div>
+          <Frame>
+            <Image fluid={portrait}></Image>
+          </Frame>
+        </div>
         <p>{bio}</p>
       </Container>
     </Layout>
@@ -21,16 +25,18 @@ export default function about({ data }) {
 
 const Container = styled.main`
   padding: 8rem;
+  display: flex;
+  align-items: center;
 
   p {
     font-size: 4rem;
-    margin-left: 25vw;
+    margin-left: 8rem;
   }
 `
 
-const Portrait = styled(Image)`
+const Frame = styled.div`
   width: 20vw;
-  filter: invert(0.3);
+  filter: invert(0.2);
   clip-path: circle(10vw at center);
 `
 
