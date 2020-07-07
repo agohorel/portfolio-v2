@@ -13,8 +13,6 @@ export default function projectTemplate({ data }) {
   const { markdownRemark } = data
   const { frontmatter: project } = markdownRemark
 
-  console.log(project)
-
   return (
     <Layout>
       <Title>{project.name.replace(/ /g, "_")}</Title>
@@ -58,15 +56,19 @@ const ProjectContainer = styled.div`
 `
 
 const SubContainer = styled.div`
-  width: 50%;
+  width: 60%;
   padding: 2rem;
+
+  :last-of-type {
+    width: 40%;
+  }
 `
 
 const Title = styled.h1`
   margin-top: 4rem;
   font-size: 6rem;
   text-transform: uppercase;
-  margin-left: calc(50% + 2rem);
+  margin-left: calc(60% + 2rem);
 `
 
 const Description = styled.p`
