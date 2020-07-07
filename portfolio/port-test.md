@@ -3,7 +3,7 @@ type: portfolio
 path: /aleph
 date: 2020-05-03T19:02:04.920Z
 name: aleph
-thumbnail: /assets/aleph.png
+thumbnail: /assets/aleph-card.png
 description: >-
   Aleph is a cross-platform desktop application and programming framework
   designed for developing and performing audio-reactive visuals using browser
