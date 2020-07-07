@@ -14,7 +14,7 @@ export default class Sketch extends Component {
   Sketch = p => {
     p5.disableFriendlyErrors = true
 
-    let scale = 20
+    let scale = 12
     let inc = 0.01
     let zoff = 0
     let cols, rows
@@ -37,9 +37,21 @@ export default class Sketch extends Component {
       p.strokeWeight(0.1)
       let yoff = 0
 
-      for (let y = 0; y <= rows; y++) {
+      if (p.frameCount % 2 === 0) {
+        p.iterator(0, yoff)
+      } else {
+        p.iterator(1, yoff)
+      }
+    }
+
+    p.windowResized = () => {
+      p.resizeCanvas(p.windowWidth / 2, p.windowHeight / 2)
+    }
+
+    p.iterator = (start, yoff) => {
+      for (let y = start; y <= rows; y += 2) {
         let xoff = 0
-        for (let x = 0; x <= cols; x++) {
+        for (let x = start; x <= cols; x += 2) {
           xoff += inc
           let angle = p.noise(xoff, yoff, zoff) * p.TWO_PI
           let v = p5.Vector.fromAngle(angle)
@@ -53,13 +65,9 @@ export default class Sketch extends Component {
           p.pop()
         }
         yoff += inc
-        zoff += 0.0001
+        zoff += 0.0002
         inc = p.noise(yoff, zoff) * 0.15
       }
-    }
-
-    p.windowResized = () => {
-      p.resizeCanvas(p.windowWidth / 2, p.windowHeight / 2)
     }
   }
 
