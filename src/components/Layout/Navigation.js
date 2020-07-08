@@ -7,8 +7,8 @@ export const Navigation = () => {
   return (
     <NavContainer>
       <Nav>
-        <Link to="/projects">WORKS</Link>
-        <Link to="/">BLOG</Link>
+        <Link to="/projects">PORTFOLIO</Link>
+        {/* <Link to="/">BLOG</Link> */}
         <Link to="/about">ABOUT</Link>
         <Link to="/contact">CONTACT</Link>
       </Nav>
