@@ -30,14 +30,22 @@ collections:
           label: Backend Tools,
           widget: list,
           required: false,
+          default: "",
         }
       - {
           name: frontend_tools,
           label: Frontend Tools,
           widget: list,
           required: false,
+          default: "",
         }
-      - { name: other_tools, label: Other Tools, widget: list, required: false }
+      - {
+          name: other_tools,
+          label: Other Tools,
+          widget: list,
+          required: false,
+          default: "",
+        }
       - { name: demo_url, label: Demo URL }
       - { name: repo_url, label: Repo URL }
       - {
