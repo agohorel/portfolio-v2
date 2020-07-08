@@ -6,9 +6,7 @@ import { StyledLink } from "../../styles/common"
 export const Header = () => {
   return (
     <StyledLink to="/">
-      <Type>
-        ALEX GOHOREL | FULL STACK DEVELOPER &amp; AUDIOVISUAL DESIGNER
-      </Type>
+      <Type>ALEX GOHOREL | SOFTWARE ENGINEER &amp; AUDIOVISUAL DESIGNER</Type>
     </StyledLink>
   )
 }
