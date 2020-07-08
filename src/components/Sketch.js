@@ -26,7 +26,11 @@ export default class Sketch extends Component {
     }
 
     p.draw = () => {
-      p.fill(255, 5)
+      if (p.frameCount % 5 === 0) {
+        p.fill(255, 20)
+      } else {
+        p.fill(255, 5)
+      }
       p.noStroke()
       p.rect(0, 0, p.width, p.height)
 
