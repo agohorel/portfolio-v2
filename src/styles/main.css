@@ -2,6 +2,7 @@
   font-family: "Jetbrains Mono";
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: url("../assets/fonts/JetBrainsMono-Regular.eot"); /* IE9 Compat Modes */
   src: local("Jetbrains Mono"),
     url("../assets/fonts/JetBrainsMono-Regular.eot?#iefix")
@@ -26,7 +27,6 @@ html {
 
 body {
   font-family: "Jetbrains Mono", monospace;
-  font-display: fallback;
   animation: fadeIn 1.5s ease-out forwards;
 }
 
