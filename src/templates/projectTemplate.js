@@ -13,6 +13,8 @@ export default function projectTemplate({ data }) {
   const { markdownRemark } = data
   const { frontmatter: project } = markdownRemark
 
+  console.log(data)
+
   return (
     <Layout>
       <Title>{project.name.replace(/ /g, "_")}</Title>
@@ -21,7 +23,13 @@ export default function projectTemplate({ data }) {
           <Image fluid={project.image[0].childImageSharp.fluid}></Image>
         </SubContainer>
         <SubContainer>
-          <Description>{project.description}</Description>
+          {project.description.split("\n").map(paragraph => {
+            return (
+              <Description key={paragraph.substring(0, 10)}>
+                {paragraph}
+              </Description>
+            )
+          })}
           <ToolsUsed project={project} size="large"></ToolsUsed>
           <Links>
             <div>
@@ -73,7 +81,11 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 1.4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+
+  :last-of-type {
+    margin-bottom: 4rem;
+  }
 `
 
 const Links = styled.div`
