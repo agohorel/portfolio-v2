@@ -29,7 +29,7 @@ backend_tools:
 frontend_tools:
   - react-native
 other_tools:
-  - ""
+  - '""'
 demo_url: https://www.keyconservation.org/
 repo_url: https://github.com/Lambda-School-Labs/key-conservation-mobile
 image:
