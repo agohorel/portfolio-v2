@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 import { ButtonLink, ButtonExternalLink } from "../Layout/Buttons"
 import { ToolsUsed } from "../Portfolio/ToolsUsed"
@@ -10,9 +11,11 @@ export const ProjectCard = ({ data }) => {
 
   return (
     <Card>
-      <ImageContainer>
-        <Image fluid={project.thumbnail?.childImageSharp.fluid}></Image>
-      </ImageContainer>
+      <Link to={project.path}>
+        <ImageContainer>
+          <Image fluid={project.thumbnail?.childImageSharp.fluid}></Image>
+        </ImageContainer>
+      </Link>
       <Name>{project.name}</Name>
       <ToolsUsed project={project}></ToolsUsed>
       <ButtonContainer>
