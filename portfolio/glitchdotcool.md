@@ -22,6 +22,8 @@ frontend_tools:
   - gatsby
   - react
   - graphql
+other_tools:
+  - '""'
 demo_url: https://www.glitch.cool/
 repo_url: https://github.com/agohorel/glitch-dot-cool/
 image:
