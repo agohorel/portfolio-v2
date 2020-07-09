@@ -13,8 +13,6 @@ export default function projectTemplate({ data }) {
   const { markdownRemark } = data
   const { frontmatter: project } = markdownRemark
 
-  console.log(data)
-
   return (
     <Layout>
       <Title>{project.name.replace(/ /g, "_")}</Title>
@@ -32,16 +30,18 @@ export default function projectTemplate({ data }) {
           })}
           <ToolsUsed project={project} size="large"></ToolsUsed>
           <Links>
-            <div>
-              <Link
-                href={project.demo_url}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <Icon icon={faDesktop}></Icon>
-                demo
-              </Link>
-            </div>
+            {project.demo_url !== "N/A" && (
+              <div>
+                <Link
+                  href={project.demo_url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Icon icon={faDesktop}></Icon>
+                  demo
+                </Link>
+              </div>
+            )}
             <div>
               <Link
                 href={project.repo_url}
