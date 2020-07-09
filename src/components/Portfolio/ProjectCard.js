@@ -19,9 +19,15 @@ export const ProjectCard = ({ data }) => {
       <Name>{project.name}</Name>
       <ToolsUsed project={project}></ToolsUsed>
       <ButtonContainer>
-        <ButtonExternalLink href={project.demo_url}>demo</ButtonExternalLink>
-        <ButtonExternalLink href={project.repo_url}>repo</ButtonExternalLink>
+        {project.demo_url !== "N/A" && (
+          <ButtonExternalLink href={project.demo_url}>demo</ButtonExternalLink>
+        )}
+        {project.repo_url !== "N/A" && (
+          <ButtonExternalLink href={project.repo_url}>repo</ButtonExternalLink>
+        )}
         <ButtonLink path={project.path}>details</ButtonLink>
+
+        {project.demo_url === "N/A" && <Spacer></Spacer>}
       </ButtonContainer>
     </Card>
   )
@@ -71,4 +77,8 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
   position: absolute;
   bottom: 20px;
+`
+
+const Spacer = styled.div`
+  width: 100px;
 `
