@@ -21,14 +21,6 @@ export default function projectTemplate({ data }) {
           <Image fluid={project.image[0].childImageSharp.fluid}></Image>
         </SubContainer>
         <SubContainer>
-          {project.description.split("\n").map(paragraph => {
-            return (
-              <Description key={paragraph.substring(0, 10)}>
-                {paragraph}
-              </Description>
-            )
-          })}
-          <ToolsUsed project={project} size="large"></ToolsUsed>
           <Links>
             {project.demo_url !== "N/A" && (
               <div>
@@ -53,6 +45,15 @@ export default function projectTemplate({ data }) {
               </Link>
             </div>
           </Links>
+
+          {project.description.split("\n").map(paragraph => {
+            return (
+              <Description key={paragraph.substring(0, 10)}>
+                {paragraph}
+              </Description>
+            )
+          })}
+          <ToolsUsed project={project} size="large"></ToolsUsed>
         </SubContainer>
       </ProjectContainer>
     </Layout>
@@ -90,8 +91,7 @@ const Description = styled.p`
 
 const Links = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-top: 4rem;
+  margin-bottom: 2rem;
 `
 
 const Link = styled(ExtLink)`
@@ -99,6 +99,7 @@ const Link = styled(ExtLink)`
   background-color: #1a1a1a;
   color: #eee;
   display: inline;
+  margin-right: 2rem;
 `
 
 const Icon = styled(FontAwesomeIcon)`
