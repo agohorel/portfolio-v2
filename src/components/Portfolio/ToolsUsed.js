@@ -30,7 +30,6 @@ export const ToolsUsed = ({ project, size = "default" }) => {
           ))}
         </Column>
       )}
-      {project.backend_tools[0] === "N/A" && <Column></Column>}
 
       {project.other_tools[0] !== "N/A" && (
         <Column>
@@ -44,6 +43,7 @@ export const ToolsUsed = ({ project, size = "default" }) => {
           ))}
         </Column>
       )}
+      {project.backend_tools[0] === "N/A" && <Column></Column>}
       {project.other_tools[0] === "N/A" && <Column></Column>}
     </Tools>
   )
