@@ -99,6 +99,7 @@ const Link = styled(ExtLink)`
   background-color: #1a1a1a;
   color: #eee;
   display: inline;
+  padding-right: 3px;
   margin-right: 2rem;
 `
 
