@@ -20,7 +20,7 @@ frontend_tools:
   - p5.js
   - vanilla javascript
 other_tools:
-  - ""
+  - "N/A"
 demo_url: https://www.aleph.zone
 repo_url: https://www.github.com/agohorel/aleph
 image:
