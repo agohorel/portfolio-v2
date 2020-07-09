@@ -30,7 +30,7 @@ const ContactForm = () => {
           </FormGroup>
 
           <FormGroup>
-            <FormSubmit type="submit" value="Send Message" />
+            <FormSubmit type="submit" value="send message" />
           </FormGroup>
         </StyledForm>
       </Centered>
