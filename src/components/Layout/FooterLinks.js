@@ -8,9 +8,9 @@ import {
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons"
 
-export const FooterLinks = () => {
+export const FooterLinks = ({ location }) => {
   return (
-    <Container>
+    <Container location={location}>
       <IconLink href="#" target="_blank" rel="noopener noreferrer">
         <Icon icon={faGithubSquare}></Icon>
       </IconLink>
@@ -30,26 +30,7 @@ export const FooterLinks = () => {
   )
 }
 
-const Container = styled.div`
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-`
-
-const Icon = styled(FontAwesomeIcon)`
-  font-size: 3.2rem;
-`
-
 const IconLink = styled.a`
-  color: #1c1c1c;
   text-decoration: none;
 
   :not(:last-child) {
@@ -59,4 +40,29 @@ const IconLink = styled.a`
   :hover {
     color: #5c5c5c;
   }
+`
+
+const Container = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  background-image: ${props =>
+    props.location === "sideNav"
+      ? "none"
+      : `linear-gradient(
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  )`};
+
+  ${IconLink} {
+    color: ${props => (props.location === "sideNav" ? "#fff" : "#1c1c1c")};
+  }
+`
+
+const Icon = styled(FontAwesomeIcon)`
+  font-size: 3.2rem;
 `
