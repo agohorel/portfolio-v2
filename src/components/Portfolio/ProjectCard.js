@@ -47,6 +47,18 @@ const Card = styled.div`
     transform: translateY(-3px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   }
+
+  @media (max-width: 1500px) {
+    width: calc(50% - 8rem);
+  }
+
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    margin: 2rem 1rem;
+  }
 `
 
 const ImageContainer = styled.div`
