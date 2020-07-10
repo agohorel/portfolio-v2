@@ -5,7 +5,7 @@ import { Header } from "./Header"
 import { Navigation } from "./Navigation"
 import { FooterLinks } from "./FooterLinks"
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, location }) => {
   return (
     <LayoutContainer>
       <HeaderContainer>
@@ -13,7 +13,7 @@ export const Layout = ({ children }) => {
         <Navigation></Navigation>
       </HeaderContainer>
       {children}
-      <FooterLinks></FooterLinks>
+      {location?.pathname !== "/projects" && <FooterLinks></FooterLinks>}
     </LayoutContainer>
   )
 }

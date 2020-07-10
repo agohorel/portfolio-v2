@@ -8,9 +8,9 @@ import {
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons"
 
-export const FooterLinks = ({ location }) => {
+export const FooterLinks = ({ placement, location }) => {
   return (
-    <Container location={location}>
+    <Container placement={placement}>
       <IconLink href="#" target="_blank" rel="noopener noreferrer">
         <Icon icon={faGithubSquare}></Icon>
       </IconLink>
@@ -50,7 +50,7 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   background-image: ${props =>
-    props.location === "sideNav"
+    props.placement === "sideNav"
       ? "none"
       : `linear-gradient(
     rgba(255, 255, 255, 0) 0%,
@@ -59,7 +59,7 @@ const Container = styled.div`
   )`};
 
   ${IconLink} {
-    color: ${props => (props.location === "sideNav" ? "#fff" : "#1c1c1c")};
+    color: ${props => (props.placement === "sideNav" ? "#fff" : "#1c1c1c")};
   }
 `
 

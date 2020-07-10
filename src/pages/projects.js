@@ -5,11 +5,11 @@ import styled from "styled-components"
 import { Layout } from "../components/Layout/Layout"
 import { ProjectCard } from "../components/Portfolio/ProjectCard"
 
-export default function devProjects({ data }) {
+export default function devProjects({ data, location }) {
   const projects = data.allMarkdownRemark.nodes
 
   return (
-    <Layout>
+    <Layout location={location}>
       <ProjectCardContainer>
         {projects.map(project => (
           <ProjectCard key={project.id} data={project}></ProjectCard>

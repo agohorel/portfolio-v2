@@ -15,7 +15,7 @@ export const SideNav = ({ navState }) => {
         <Link to="/about">ABOUT</Link>
         <Link to="/contact">CONTACT</Link>
       </Nav>
-      <FooterLinks location="sideNav"></FooterLinks>
+      <FooterLinks placement="sideNav"></FooterLinks>
     </Drawer>
   )
 }
@@ -32,7 +32,6 @@ const Drawer = styled.nav`
     props.open ? `translate(0, 0)` : `translate(${navWidth}, 0)`};
   transition: 0.3s ease-out all;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-//   max-width: 500px;
 `
 
 const Nav = styled.nav`
