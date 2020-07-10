@@ -14,7 +14,7 @@ export default class Sketch extends Component {
   Sketch = p => {
     p5.disableFriendlyErrors = true
 
-    let scale = 12
+    let scale = 15
     let inc = 0.01
     let zoff = 0
     let cols, rows
