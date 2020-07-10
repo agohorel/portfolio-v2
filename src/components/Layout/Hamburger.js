@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const Hamburger = ({ toggleNav, visible }) => {
   return (
-    <Container onClick={toggleNav}>
+    <Container onClick={toggleNav} visible={visible}>
       <HamburgerIcon visible={visible}></HamburgerIcon>
     </Container>
   )
@@ -11,8 +11,8 @@ export const Hamburger = ({ toggleNav, visible }) => {
 
 const Container = styled.div`
   z-index: 3;
-  position: fixed;
-  right: 20px;
+  position: ${props => (props.visible ? "fixed" : "relative")};
+  right: ${props => (props.visible ? "20px" : "0")};
   width: 3rem;
   height: 3rem;
   cursor: pointer;
