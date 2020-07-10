@@ -21,7 +21,7 @@ export const SideNav = ({ navState }) => {
 }
 
 const Drawer = styled.nav`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;

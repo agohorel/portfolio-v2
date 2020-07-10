@@ -11,7 +11,8 @@ export const Hamburger = ({ toggleNav, visible }) => {
 
 const Container = styled.div`
   z-index: 3;
-  position: relative;
+  position: fixed;
+  right: 20px;
   width: 3rem;
   height: 3rem;
   cursor: pointer;
