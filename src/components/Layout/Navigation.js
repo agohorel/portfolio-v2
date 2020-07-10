@@ -17,7 +17,6 @@ export const Navigation = () => {
       <DesktopNav>
         <Nav>
           <Link to="/projects">PORTFOLIO</Link>
-          {/* <Link to="/">BLOG</Link> */}
           <Link to="/about">ABOUT</Link>
           <Link to="/contact">CONTACT</Link>
         </Nav>
