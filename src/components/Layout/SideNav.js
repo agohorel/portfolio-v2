@@ -25,7 +25,7 @@ export const SideNav = ({ navState }) => {
 
   return (
     <Drawer open={navState} height={height}>
-      <Nav>
+      <Nav height={height}>
         <Link to="/projects">PORTFOLIO</Link>
         <Link to="/about">ABOUT</Link>
         <Link to="/contact">CONTACT</Link>
@@ -51,7 +51,7 @@ const Drawer = styled.nav`
 
 const Nav = styled.nav`
   display: flex;
-  height: 100vh;
+  height: ${props => props.height}px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
