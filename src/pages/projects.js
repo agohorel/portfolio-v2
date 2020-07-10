@@ -52,6 +52,14 @@ const ProjectCardContainer = styled.div`
   flex-wrap: wrap;
   padding: 4rem 8rem;
 
+  @media (max-width: 1050px) {
+    padding: 2rem 2rem;
+  }
+
+  @media (max-width: 925px) {
+    padding: 4rem 4rem;
+  }
+
   @media (max-width: 600px) {
     padding: 2rem 2rem;
   }

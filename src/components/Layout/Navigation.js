@@ -47,7 +47,7 @@ const Link = styled(StyledLink)`
 `
 
 const DesktopNav = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 1110px) {
     display: none;
   }
 `
@@ -55,7 +55,7 @@ const DesktopNav = styled.div`
 const MobileNav = styled.div`
   display: none;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1110px) {
     display: inline;
   }
 `

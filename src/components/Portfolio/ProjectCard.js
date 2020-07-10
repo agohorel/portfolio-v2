@@ -52,7 +52,7 @@ const Card = styled.div`
     width: calc(50% - 8rem);
   }
 
-  @media (max-width: 1050px) {
+  @media (max-width: 925px) {
     width: 100%;
   }
 
