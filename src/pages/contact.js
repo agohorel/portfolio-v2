@@ -1,15 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 import { Layout } from "../components/Layout/Layout"
 import { Centered, StyledButton, PageTitle } from "../styles/common"
 import colors from "../styles/colors"
 
+import { useDeviceHeight } from "../hooks/useDeviceHeight"
+
 const ContactForm = () => {
+  const [height, handleResize] = useDeviceHeight()
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
   return (
     <Layout>
       <Centered>
         <StyledForm
+          height={height}
           action="https://formspree.io/gohorelalex@gmail.com"
           method="POST"
         >
@@ -41,8 +51,11 @@ const ContactForm = () => {
 export default ContactForm
 
 const StyledForm = styled.form`
+  height: ${props => props.height * 0.75}px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 75%;
-  margin-top: 6rem;
 
   h1 {
     font-size: 6rem;
@@ -64,8 +77,6 @@ const StyledForm = styled.form`
   }
 
   @media (max-width: 600px) {
-    margin-top: 0;
-
     h1 {
       padding-top: 0;
       font-size: 5rem;
@@ -74,7 +85,6 @@ const StyledForm = styled.form`
 
   @media (max-width: 400px) {
     h1 {
-      padding-top: 0;
       font-size: 3rem;
     }
 
