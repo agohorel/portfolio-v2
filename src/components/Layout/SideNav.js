@@ -7,8 +7,10 @@ import { FooterLinks } from "./FooterLinks"
 const navWidth = "67vw"
 
 function getWindowHeight() {
-  const { innerHeight: height } = window
-  return height
+  if (typeof window !== "undefined") {
+    const { innerHeight: height } = window
+    return height
+  }
 }
 
 export const SideNav = ({ navState }) => {
@@ -19,8 +21,10 @@ export const SideNav = ({ navState }) => {
       setHeight(getWindowHeight())
     }
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize)
+      return () => window.removeEventListener("resize", handleResize)
+    }
   }, [])
 
   return (
