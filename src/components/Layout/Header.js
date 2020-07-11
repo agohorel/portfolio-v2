@@ -14,6 +14,7 @@ export const Header = () => {
 const Type = styled.h1`
   padding: 2rem;
   font-size: 2.2rem;
+  margin-bottom: 3px;
 
   :before {
     content: "ALEX GOHOREL | SOFTWARE ENGINEER & AUDIOVISUAL DESIGNER";
