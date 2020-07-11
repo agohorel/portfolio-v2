@@ -12,6 +12,10 @@ export const Navigation = () => {
     setIsSideNavOpen(!isSideNavOpen)
   }
 
+  const closeNav = () => {
+    setIsSideNavOpen(false)
+  }
+
   return (
     <NavContainer>
       <DesktopNav>
@@ -24,7 +28,7 @@ export const Navigation = () => {
 
       <MobileNav>
         <SideNav navState={isSideNavOpen}></SideNav>
-        <Backdrop visible={isSideNavOpen}></Backdrop>
+        <Backdrop visible={isSideNavOpen} onClick={closeNav}></Backdrop>
         <Hamburger toggleNav={toggleNav} visible={isSideNavOpen}></Hamburger>
       </MobileNav>
     </NavContainer>
@@ -64,7 +68,7 @@ const MobileNav = styled.div`
 `
 
 const Backdrop = styled.div`
-  pointer-events: none;
+  pointer-events: ${props => (props.visible ? "default" : "none")};
   position: fixed;
   top: 0;
   left: 0;
