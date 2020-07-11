@@ -62,6 +62,27 @@ const StyledForm = styled.form`
   @media only screen and (min-width: 900px) {
     width: 50%;
   }
+
+  @media (max-width: 600px) {
+    margin-top: 0;
+
+    h1 {
+      padding-top: 0;
+      font-size: 5rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      padding-top: 0;
+      font-size: 3rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.5rem;
+    }
+  }
 `
 
 const FormInput = styled.input`
