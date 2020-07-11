@@ -21,10 +21,8 @@ export const SideNav = ({ navState }) => {
       setHeight(getWindowHeight())
     }
 
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleResize)
-      return () => window.removeEventListener("resize", handleResize)
-    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   return (
