@@ -33,6 +33,10 @@ export const Navigation = () => {
 
 const NavContainer = styled.div`
   padding: 2rem;
+
+  @media (max-width: 600px) {
+    padding: 2rem 2rem 1rem 2rem;
+  }
 `
 
 const Nav = styled.nav`
@@ -60,6 +64,7 @@ const MobileNav = styled.div`
 `
 
 const Backdrop = styled.div`
+  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
