@@ -1,29 +1,20 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 import { StyledLink } from "../../styles/common"
 import { FooterLinks } from "./FooterLinks"
 
+import { useDeviceHeight } from "../../hooks/useDeviceHeight"
+
 const navWidth = "67vw"
 
-function getWindowHeight() {
-  if (typeof window !== "undefined") {
-    const { innerHeight: height } = window
-    return height
-  }
-}
-
 export const SideNav = ({ navState }) => {
-  const [height, setHeight] = useState(getWindowHeight())
+  const [height, handleResize] = useDeviceHeight()
 
   useEffect(() => {
-    function handleResize() {
-      setHeight(getWindowHeight())
-    }
-
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  }, [])
+  }, [handleResize])
 
   return (
     <Drawer open={navState} height={height}>
@@ -37,7 +28,7 @@ export const SideNav = ({ navState }) => {
   )
 }
 
-const Drawer = styled.nav`
+const Drawer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
