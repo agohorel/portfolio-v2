@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const ToolsUsed = ({ project, size = "default" }) => {
   return (
-    <Tools>
+    <Tools size={size}>
       {project.frontend_tools[0] !== "N/A" && (
         <Column>
           <ListItem size={size} color="light">
@@ -54,6 +54,24 @@ const Tools = styled.div`
   justify-content: space-between;
   margin: ${props =>
     props.size === "large" ? "1rem 0 1rem 0" : "1rem 0 5rem 0"};
+
+  @media (max-width: 900px) {
+    flex-direction: ${props => (props.size === "large" ? "column" : "row")};
+    margin: 0;
+
+    div {
+      width: 100%;
+      text-align: center;
+    }
+
+    div:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
 `
 
 const Column = styled.div`

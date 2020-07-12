@@ -21,6 +21,7 @@ export default function projectTemplate({ data, pageContext }) {
   return (
     <Layout>
       <Title>{project.name.replace(/ /g, "_")}</Title>
+
       <ProjectContainer>
         <SubContainer>
           <Image fluid={project.image[0].childImageSharp.fluid}></Image>
@@ -64,7 +65,7 @@ export default function projectTemplate({ data, pageContext }) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <Icon repoicon icon={faCodeBranch}></Icon>
+                <Icon icon={faCodeBranch}></Icon>
                 repo
               </Link>
             </div>
@@ -86,6 +87,11 @@ export default function projectTemplate({ data, pageContext }) {
 
 const ProjectContainer = styled.div`
   display: flex;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const SubContainer = styled.div`
@@ -95,6 +101,34 @@ const SubContainer = styled.div`
   :last-of-type {
     width: 40%;
   }
+
+  @media (max-width: 1500px) {
+    width: 50%;
+
+    :last-of-type {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    width: 67%;
+
+    :first-of-type {
+      padding-bottom: 0;
+    }
+
+    :last-of-type {
+      width: 67%;
+    }
+  }
+
+  @media (max-width: 665px) {
+    width: 100%;
+
+    :last-of-type {
+      width: 100%;
+    }
+  }
 `
 
 const Title = styled.h1`
@@ -102,6 +136,17 @@ const Title = styled.h1`
   font-size: 6rem;
   text-transform: uppercase;
   margin-left: calc(60% + 2rem);
+
+  @media (max-width: 1500px) {
+    margin-left: calc(50% + 2rem);
+  }
+
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+    margin-left: 0;
+    text-align: center;
+    font-size: calc(5vw + 12px);
+  }
 `
 
 const Description = styled.p`
@@ -115,6 +160,7 @@ const Description = styled.p`
 
 const Links = styled.div`
   display: flex;
+  justify-content: space-between;
   margin-bottom: 2rem;
 `
 
@@ -123,8 +169,20 @@ const LinkStyles = `
   background-color: #1a1a1a;
   color: #eee;
   display: inline;
-  padding-right: 3px;
-  margin-right: 2rem;
+  padding: 2px 3px 2px 2px;
+  
+
+  @media (max-width: 1200px) {
+    font-size: calc(1vw + 14px);
+  }
+
+  @media (max-width: 400px) {
+    padding: 5px;
+
+    svg {
+      display: none;
+    }
+  }
 `
 
 const Link = styled(ExtLink)`
