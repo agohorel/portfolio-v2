@@ -7,7 +7,7 @@ import colors from "../styles/colors"
 
 import { useDeviceHeight } from "../hooks/useDeviceHeight"
 
-const ContactForm = () => {
+const ContactForm = ({ location }) => {
   const [height, handleResize] = useDeviceHeight()
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const ContactForm = () => {
   }, [handleResize])
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Centered>
         <StyledForm
           height={height}

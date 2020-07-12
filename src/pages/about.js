@@ -5,12 +5,12 @@ import styled from "styled-components"
 
 import { Layout } from "../components/Layout/Layout"
 
-export default function about({ data }) {
+export default function about({ data, location }) {
   const content = data.allMarkdownRemark.edges[0].node.frontmatter
   const bio = content.bio
   const portrait = content.portrait.childImageSharp.fluid
   return (
-    <Layout>
+    <Layout location={location}>
       <Container>
         <div>
           <Frame>

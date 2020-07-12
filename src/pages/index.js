@@ -7,7 +7,7 @@ import Sketch from "../components/Sketch"
 
 import { useDeviceHeight } from "../hooks/useDeviceHeight"
 
-export default () => {
+export default ({ location }) => {
   const [height, handleResize] = useDeviceHeight()
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default () => {
   }, [handleResize])
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SketchContainer height={height}>
         <Sketch></Sketch>
       </SketchContainer>
