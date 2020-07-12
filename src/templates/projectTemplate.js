@@ -3,13 +3,18 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faDesktop, faCodeBranch } from "@fortawesome/free-solid-svg-icons"
+import {
+  faDesktop,
+  faCodeBranch,
+  faBackward,
+  faForward,
+} from "@fortawesome/free-solid-svg-icons"
 
 import { Layout } from "../components/Layout/Layout"
 import { ToolsUsed } from "../components/Portfolio/ToolsUsed"
-import { ExtLink } from "../styles/common"
+import { ExtLink, StyledLink } from "../styles/common"
 
-export default function projectTemplate({ data }) {
+export default function projectTemplate({ data, pageContext }) {
   const { markdownRemark } = data
   const { frontmatter: project } = markdownRemark
 
@@ -22,6 +27,25 @@ export default function projectTemplate({ data }) {
         </SubContainer>
         <SubContainer>
           <Links>
+            <div>
+              <InternalLink
+                to={pageContext.prev.node.frontmatter.path}
+                style={{ paddingRight: "0.5rem" }}
+              >
+                <Icon icon={faBackward}></Icon>
+                prev
+              </InternalLink>
+            </div>
+            <div>
+              <InternalLink
+                to={pageContext.next.node.frontmatter.path}
+                style={{ paddingLeft: "0.5rem" }}
+              >
+                next
+                <Icon icon={faForward}></Icon>
+              </InternalLink>
+            </div>
+
             {project.demo_url !== "N/A" && (
               <div>
                 <Link
@@ -94,13 +118,26 @@ const Links = styled.div`
   margin-bottom: 2rem;
 `
 
-const Link = styled(ExtLink)`
+const LinkStyles = `
   font-size: 3rem;
   background-color: #1a1a1a;
   color: #eee;
   display: inline;
   padding-right: 3px;
   margin-right: 2rem;
+`
+
+const Link = styled(ExtLink)`
+  ${LinkStyles}
+`
+
+const InternalLink = styled(StyledLink)`
+  ${LinkStyles}
+
+  svg {
+    margin: 0;
+    padding: 0.5rem;
+  }
 `
 
 const Icon = styled(FontAwesomeIcon)`

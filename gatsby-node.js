@@ -93,11 +93,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  projects.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  projects.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
+    const allProjects = projects.data.allMarkdownRemark.edges
+
     createPage({
       path: node.frontmatter.path,
       component: projectTemplate,
-      context: {}, // additional data can be passed via context
+      context: {
+        index,
+        prev: allProjects[index - 1] || allProjects[allProjects.length-1],
+        next: allProjects[index + 1] || allProjects[0],
+      },
     })
   })
 }
