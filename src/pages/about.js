@@ -32,12 +32,50 @@ const Container = styled.main`
     font-size: 4rem;
     margin-left: 8rem;
   }
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+
+    div {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-left: 0;
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 4rem;
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 2rem;
+    p {
+      font-size: 2rem;
+    }
+  }
 `
 
 const Frame = styled.div`
   width: 20vw;
   filter: invert(0.2);
   clip-path: circle(10vw at center);
+
+  @media (max-width: 1300px) {
+    width: 32vw;
+    clip-path: circle(16vw at center);
+  }
+
+  @media (max-width: 600px) {
+    width: 50vw;
+    clip-path: circle(25vw at center);
+  }
 `
 
 export const pageQuery = graphql`
