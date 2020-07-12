@@ -20,7 +20,7 @@ const Type = styled.h1`
     content: "ALEX GOHOREL | SOFTWARE ENGINEER & AUDIOVISUAL DESIGNER";
   }
 
-  @media (max-width: 835px) {
+  @media (max-width: 847px) {
     :before {
       content: "ALEX GOHOREL | DEV & A/V";
     }
