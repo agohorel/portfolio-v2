@@ -15,14 +15,14 @@ export const Layout = ({ children, location }) => {
         <Navigation></Navigation>
       </HeaderContainer>
       {children}
-      {footerPaths.includes(location?.pathname) && <FooterLinks></FooterLinks>}
+      {footerPaths.includes(location?.pathname) && (
+        <FooterLinks location={location}></FooterLinks>
+      )}
     </LayoutContainer>
   )
 }
 
-const LayoutContainer = styled.div`
-  min-height: 100vh;
-`
+const LayoutContainer = styled.div``
 
 const HeaderContainer = styled.div`
   z-index: 2;

@@ -42,6 +42,7 @@ const Container = styled.main`
 
     p {
       margin-left: 0;
+      padding-right: 8rem;
       font-size: 3rem;
     }
   }

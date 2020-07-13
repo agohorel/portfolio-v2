@@ -10,7 +10,7 @@ import {
 
 export const FooterLinks = ({ placement, location }) => {
   return (
-    <Container placement={placement}>
+    <Container placement={placement} location={location?.pathname}>
       <IconLink href="#" target="_blank" rel="noopener noreferrer">
         <Icon icon={faGithubSquare}></Icon>
       </IconLink>
@@ -53,13 +53,23 @@ const Container = styled.div`
     props.placement === "sideNav"
       ? "none"
       : `linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 100%
-  )`};
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%
+      )`};
 
   ${IconLink} {
     color: ${props => (props.placement === "sideNav" ? "#fff" : "#1c1c1c")};
+  }
+
+  @media (max-width: 1300px) {
+    flex-direction: ${props =>
+      props.location === "/about" ? "column" : "row"};
+
+    ${IconLink} {
+      margin-top: ${props =>
+        props.location === "/about" ? "1rem" : "inherit"};
+    }
   }
 `
 
