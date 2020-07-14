@@ -1,23 +1,14 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import "../styles/main.css"
 
 import { Layout } from "../components/Layout/Layout"
 import Sketch from "../components/Sketch"
 
-import { useDeviceHeight } from "../hooks/useDeviceHeight"
-
 export default ({ location }) => {
-  const [height, handleResize] = useDeviceHeight()
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [handleResize])
-
   return (
     <Layout location={location}>
-      <SketchContainer height={height}>
+      <SketchContainer>
         <Sketch></Sketch>
       </SketchContainer>
     </Layout>
@@ -32,6 +23,6 @@ const SketchContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: ${props => props.height}px;
+  height: 100%;
   min-width: 100%;
 `
