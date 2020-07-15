@@ -35,6 +35,13 @@ module.exports = {
         path: `${__dirname}/about`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "icons",
+        path: `${__dirname}/src/assets/icons`,
+      },
+    },
     netlifyCMSPath,
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
