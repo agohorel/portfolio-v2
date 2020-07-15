@@ -4,8 +4,8 @@ path: /about
 bio: "Hi, my name is Alex Gohorel. I'm a full stack software engineer
   specializing in all things Javascript. I love building beautiful things that
   go fast. My background is in design and music production, and I'm passionate
-  about exploring the intersection of aesthetics and engineering.\\n   I value
-  high quality design, performance, UX, and believe strongly in open-source
+  about exploring the intersection of aesthetics and engineering. I value high
+  quality design, performance, UX, and believe strongly in open-source
   technology and the free and open internet. "
 portrait: /assets/portrait.png
 skills:
