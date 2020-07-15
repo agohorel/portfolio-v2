@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 import { ButtonLink, ButtonExternalLink } from "../Layout/Buttons"
-import { ToolsUsed } from "../Portfolio/ToolsUsed"
 
 export const ProjectCard = ({ data }) => {
   const { frontmatter: project } = data
@@ -17,7 +16,7 @@ export const ProjectCard = ({ data }) => {
         </ImageContainer>
       </Link>
       <Name>{project.name}</Name>
-      <ToolsUsed project={project}></ToolsUsed>
+      <Description>{project.short_description}</Description>
       <ButtonContainer>
         {project.demo_url !== "N/A" && (
           <ButtonExternalLink href={project.demo_url}>demo</ButtonExternalLink>
@@ -93,4 +92,10 @@ const ButtonContainer = styled.div`
 
 const Spacer = styled.div`
   width: 100px;
+`
+
+const Description = styled.p`
+  font-size: 1.4rem;
+  color: #3c3c3c;
+  margin-bottom: 6rem;
 `

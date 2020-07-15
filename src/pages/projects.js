@@ -27,6 +27,7 @@ export const pageQuery = graphql`
           name
           title
           description
+          short_description
           repo_url
           demo_url
           backend_tools
