@@ -9,6 +9,8 @@ export default function about({ data, location }) {
   const content = data.allMarkdownRemark.edges[0].node.frontmatter
   const bio = content.bio
   const portrait = content.portrait.childImageSharp.fluid
+  const skills = content.skills
+
   return (
     <Layout location={location}>
       <Container>
@@ -19,6 +21,17 @@ export default function about({ data, location }) {
         </div>
         <p>{bio}</p>
       </Container>
+      <SkillsHeader>skills:</SkillsHeader>
+      <SkillContainer>
+        {skills.map((skill, idx) => {
+          return (
+            <Skill key={`${skill.icon.id}_${idx}`}>
+              <img src={skill.icon.publicURL}></img>
+              <p>{skill.skill_name}</p>
+            </Skill>
+          )
+        })}
+      </SkillContainer>
     </Layout>
   )
 }
@@ -79,6 +92,79 @@ const Frame = styled.div`
   }
 `
 
+const SkillsHeader = styled.h3`
+  text-align: center;
+  font-size: 3rem;
+`
+
+const SkillContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  padding: 4rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 400px) {
+    padding: 2rem;
+  }
+`
+
+const Skill = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 25%;
+
+  p {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  img {
+    height: 4rem;
+  }
+
+  @media (max-width: 1400px) {
+    padding-left: 12.5%;
+  }
+
+  @media (max-width: 900px) {
+    padding-left: 25%;
+  }
+
+  @media (max-width: 900px) {
+    padding-left: 12.5%;
+  }
+
+  @media (max-width: 700px) {
+    padding-left: 25%;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 12.5%;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 0;
+  }
+
+  @media (max-width: 500px) {
+    p {
+      font-size: 1.6rem;
+    }
+
+    img {
+      height: 3rem;
+    }
+  }
+`
+
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(filter: { frontmatter: { type: { eq: "about" } } }) {
@@ -87,6 +173,13 @@ export const pageQuery = graphql`
           frontmatter {
             type
             bio
+            skills {
+              skill_name
+              icon {
+                id
+                publicURL
+              }
+            }
             portrait {
               childImageSharp {
                 fluid {
