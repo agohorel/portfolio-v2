@@ -15,6 +15,7 @@ description: >-
 
 
   Symphinity was built in two 4-day sprints by a cross-functional international team of students at Lambda School. The machine learning API was developed by Data Science students who I worked with closely to deliver compatible front and back ends to the application. I worked with a team of 3 to develop the front end in one four day sprint, and worked with one other developer to develop the back end in another four day sprint.
+short_description: ml-powered music recommendations from the spotify api
 backend_tools:
   - node.js
   - express
