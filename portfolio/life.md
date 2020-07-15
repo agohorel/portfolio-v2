@@ -8,13 +8,13 @@ description: >-
   My take on John Conway's classic "Game of Life" cellular automaton. There are
   two rendering modes, 2D and 3D, both representing the same underlying
   two-dimensional Game of Life simulation. Cells are colored based on their age,
-  and in the 3D mode the cells' height also represents their age. In both modes
-  the user can generate random starting distributions or draw in their own.
+  and in the 3D mode the cells' height and specularity also represent their age.
+  In both modes the user can generate random starting distributions or draw in
+  their own.
 
 
-
-
-  This project was originally written in 4 days using vanilla Javascript, HTML canvas, and WebGL via the lovely p5.js library. I had a blast working on this and really came to appreciate the beauty of the unlikely complexity that arises from just a handful of simple rules.
+  This project was originally written in 4 days using vanilla Javascript, HTML canvas, and WebGL via the lovely p5.js library. Working on this project was a pleasure and I really came to appreciate the beauty of the unlikely complexity that arises from just a handful of simple rules.
+short_description: conway's famous game of life, rendered in 3D
 backend_tools:
   - N/A
 frontend_tools:
