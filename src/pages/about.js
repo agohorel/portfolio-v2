@@ -26,7 +26,10 @@ export default function about({ data, location }) {
         {skills.map((skill, idx) => {
           return (
             <Skill key={`${skill.icon.id}_${idx}`}>
-              <img src={skill.icon.publicURL}></img>
+              <img
+                src={skill.icon.publicURL}
+                alt={`${skill.skill_name} logo`}
+              ></img>
               <p>{skill.skill_name}</p>
             </Skill>
           )
