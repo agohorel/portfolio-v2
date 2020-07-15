@@ -66,3 +66,13 @@ collections:
       - { name: path, label: Path }
       - { name: bio, label: Bio }
       - { name: portrait, label: Portrait, widget: image }
+      - name: "skills"
+        label: "Skills"
+        widget: "list"
+        fields:
+          - name: "skill_name"
+            label: "Skill Name"
+            widget: "string"
+          - name: "icon"
+            label: "Icon"
+            widget: "image"
