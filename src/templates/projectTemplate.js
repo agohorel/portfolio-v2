@@ -71,13 +71,12 @@ export default function projectTemplate({ data, pageContext }) {
             </div>
           </Links>
 
-          {project.description.split("\n").map(paragraph => {
-            return (
-              <Description key={paragraph.substring(0, 10)}>
-                {paragraph}
-              </Description>
-            )
-          })}
+          {project.description
+            .split("\n")
+            .filter(paragraph => paragraph !== "")
+            .map(p => {
+              return <Description key={p.substring(0, 50)}>{p}</Description>
+            })}
           <ToolsUsed project={project} size="large"></ToolsUsed>
         </SubContainer>
       </ProjectContainer>
