@@ -5,7 +5,7 @@ import { Header } from "./Header"
 import { Navigation } from "./Navigation"
 import { FooterLinks } from "./FooterLinks"
 
-const footerPaths = ["/", "/contact", "/about"]
+const footerPaths = ["/", "/contact"]
 
 export const Layout = ({ children, location }) => {
   return (

@@ -4,6 +4,7 @@ import Image from "gatsby-image"
 import styled from "styled-components"
 
 import { Layout } from "../components/Layout/Layout"
+import { FooterLinks } from "../components/Layout/FooterLinks"
 
 export default function about({ data, location }) {
   const content = data.allMarkdownRemark.edges[0].node.frontmatter
@@ -35,6 +36,7 @@ export default function about({ data, location }) {
           )
         })}
       </SkillContainer>
+      <FooterLinks location={location}></FooterLinks>
     </Layout>
   )
 }
@@ -58,7 +60,6 @@ const Container = styled.main`
 
     p {
       margin-left: 0;
-      padding-right: 8rem;
       font-size: 3rem;
     }
   }

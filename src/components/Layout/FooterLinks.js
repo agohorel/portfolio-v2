@@ -9,25 +9,27 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 export const FooterLinks = ({ placement, location }) => {
-  return (
-    <Container placement={placement} location={location?.pathname}>
-      <IconLink href="#" target="_blank" rel="noopener noreferrer">
-        <Icon icon={faGithubSquare}></Icon>
-      </IconLink>
+  if (location?.pathname) {
+    return (
+      <Container placement={placement} location={location.pathname}>
+        <IconLink href="#" target="_blank" rel="noopener noreferrer">
+          <Icon icon={faGithubSquare}></Icon>
+        </IconLink>
 
-      <IconLink href="#" target="_blank" rel="noopener noreferrer">
-        <Icon icon={faLinkedin}></Icon>
-      </IconLink>
+        <IconLink href="#" target="_blank" rel="noopener noreferrer">
+          <Icon icon={faLinkedin}></Icon>
+        </IconLink>
 
-      <IconLink href="#" target="_blank" rel="noopener noreferrer">
-        <Icon icon={faTwitterSquare}></Icon>
-      </IconLink>
+        <IconLink href="#" target="_blank" rel="noopener noreferrer">
+          <Icon icon={faTwitterSquare}></Icon>
+        </IconLink>
 
-      <IconLink href="#" target="_blank" rel="noopener noreferrer">
-        <Icon icon={faInstagramSquare}></Icon>
-      </IconLink>
-    </Container>
-  )
+        <IconLink href="#" target="_blank" rel="noopener noreferrer">
+          <Icon icon={faInstagramSquare}></Icon>
+        </IconLink>
+      </Container>
+    )
+  } else return null
 }
 
 const IconLink = styled.a`
@@ -43,7 +45,8 @@ const IconLink = styled.a`
 `
 
 const Container = styled.div`
-  position: fixed;
+  position: ${props =>
+    props.location.includes("about") ? "relative" : "fixed"};
   bottom: 0;
   right: 0;
   padding: 2rem;
@@ -60,16 +63,6 @@ const Container = styled.div`
 
   ${IconLink} {
     color: ${props => (props.placement === "sideNav" ? "#fff" : "#1c1c1c")};
-  }
-
-  @media (max-width: 1300px) {
-    flex-direction: ${props =>
-      props.location === "/about" ? "column" : "row"};
-
-    ${IconLink} {
-      margin-top: ${props =>
-        props.location === "/about" ? "1rem" : "inherit"};
-    }
   }
 `
 
