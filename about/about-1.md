@@ -1,12 +1,12 @@
 ---
 type: about
 path: /about
-bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+bio: "Hi, my name is Alex Gohorel. I'm a full stack software engineer
+  specializing in all things Javascript. I love building beautiful things that
+  go fast. My background is in design and music production, and I'm passionate
+  about exploring the intersection of aesthetics and engineering.\\n   I value
+  high quality design, performance, UX, and believe strongly in open-source
+  technology and the free and open internet. "
 portrait: /assets/portrait.png
 skills:
   - skill_name: javascript
