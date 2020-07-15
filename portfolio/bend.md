@@ -9,6 +9,7 @@ description: Bend is a bespoke photobooth installation made for Anomalia
   an LCD display. It runs an application written in Processing (Java) which
   iteratively corrupts the images it takes, displaying them in sequence to the
   user as their image becomes progressively more distorted.
+short_description: bespoke glitch-photobooth built as an installation at a music festival
 backend_tools:
   - N/A
 frontend_tools:
