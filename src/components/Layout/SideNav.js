@@ -10,7 +10,7 @@ export const SideNav = ({ navState }) => {
   return (
     <Drawer open={navState}>
       <Nav>
-        <Link to="/projects">PORTFOLIO</Link>
+        <Link to="/projects">PROJECTS</Link>
         <Link to="/about">ABOUT</Link>
         <Link to="/contact">CONTACT</Link>
       </Nav>
