@@ -19,10 +19,19 @@ export default class Sketch extends Component {
     let zoff = 0
     let cols, rows
 
+    p.setMinimumDensity = () => {
+      if (cols * rows <= 500) {
+        scale = 10
+        cols = Math.floor(p.width / scale)
+        rows = Math.floor(p.height / scale)
+      }
+    }
+
     p.setup = () => {
       p.createCanvas(p.windowWidth / 2, p.windowHeight / 2)
       cols = Math.floor(p.width / scale)
       rows = Math.floor(p.height / scale)
+      p.setMinimumDensity()
     }
 
     p.draw = () => {
@@ -50,6 +59,8 @@ export default class Sketch extends Component {
 
     p.windowResized = () => {
       p.resizeCanvas(p.windowWidth / 2, p.windowHeight / 2)
+      cols = Math.floor(p.width / scale)
+      rows = Math.floor(p.height / scale)
     }
 
     p.iterator = (start, yoff) => {
