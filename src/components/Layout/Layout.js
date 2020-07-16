@@ -12,7 +12,7 @@ const footerPaths = ["/", "/contact"]
 export const Layout = ({ children, location }) => {
   const setSiteTitle = location => {
     const path = location?.pathname
-    return path === "/" ? "home" : path.replace(/\//g, "")
+    if (path) return path === "/" ? "home" : path.replace(/\//g, "")
   }
 
   return (
