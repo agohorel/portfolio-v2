@@ -7,7 +7,7 @@ bio: "Hi, my name is Alex Gohorel. I'm a full stack software engineer
   about exploring the intersection of aesthetics and engineering. I value high
   quality design, performance, UX, and believe strongly in open-source
   technology and the free and open internet. "
-portrait: /assets/portrait.png
+portrait: /assets/wedding-cheesin-square-crop.jpg
 skills:
   - skill_name: javascript
     icon: /assets/javascript.svg
