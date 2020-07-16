@@ -28,7 +28,6 @@ html {
 body {
   font-family: "Jetbrains Mono", monospace;
   animation: fadeIn 1.5s ease-out forwards;
-  overflow-x: hidden;
 }
 
 :root {
