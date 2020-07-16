@@ -3,14 +3,23 @@ import styled from "styled-components"
 import "../../styles/main.css"
 
 import { Header } from "./Header"
+import { Head } from "./Head"
 import { Navigation } from "./Navigation"
 import { FooterLinks } from "./FooterLinks"
 
 const footerPaths = ["/", "/contact"]
 
 export const Layout = ({ children, location }) => {
+  const routes = {
+    "/": "home",
+    "/about": "about",
+    "/projects": "projects",
+    "/contact": "contact",
+  }
+
   return (
     <LayoutContainer>
+      <Head title={routes[location.pathname]}></Head>
       <HeaderContainer>
         <Header></Header>
         <Navigation></Navigation>
