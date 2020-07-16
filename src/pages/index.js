@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import "../styles/main.css"
 
 import { Layout } from "../components/Layout/Layout"
 import Sketch from "../components/Sketch"
