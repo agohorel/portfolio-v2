@@ -47,7 +47,7 @@ export default function projectTemplate({ data, pageContext, location }) {
               </InternalLink>
             </div>
 
-            {project.demo_url !== "N/A" && (
+            {project.demo_url !== "N/A" ? (
               <div>
                 <Link
                   href={project.demo_url}
@@ -58,7 +58,10 @@ export default function projectTemplate({ data, pageContext, location }) {
                   demo
                 </Link>
               </div>
+            ) : (
+              <Spacer></Spacer>
             )}
+
             <div>
               <Link
                 href={project.repo_url}
@@ -201,6 +204,10 @@ const Icon = styled(FontAwesomeIcon)`
   margin-left: ${props => (props.repoicon ? "10px" : "2px")};
   margin-right: ${props => (props.repoicon ? "1.35rem" : "1rem")};
   padding: 2px;
+`
+
+const Spacer = styled.div`
+  width: 17%;
 `
 
 export const pageQuery = graphql`
