@@ -82,7 +82,7 @@ const Container = styled.main`
 
 const Frame = styled.div`
   width: 20vw;
-  filter: invert(0.2);
+  filter: grayscale(1);
   clip-path: circle(10vw at center);
 
   @media (max-width: 1300px) {
