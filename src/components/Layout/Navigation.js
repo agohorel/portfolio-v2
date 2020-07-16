@@ -20,9 +20,15 @@ export const Navigation = () => {
     <NavContainer>
       <DesktopNav>
         <Nav>
-          <Link to="/projects">PROJECTS</Link>
-          <Link to="/about">ABOUT</Link>
-          <Link to="/contact">CONTACT</Link>
+          <Link to="/projects" activeStyle={activeNavStyles}>
+            PROJECTS
+          </Link>
+          <Link to="/about" activeStyle={activeNavStyles}>
+            ABOUT
+          </Link>
+          <Link to="/contact" activeStyle={activeNavStyles}>
+            CONTACT
+          </Link>
         </Nav>
       </DesktopNav>
 
@@ -33,6 +39,10 @@ export const Navigation = () => {
       </MobileNav>
     </NavContainer>
   )
+}
+
+const activeNavStyles = {
+  fontWeight: "bold",
 }
 
 const NavContainer = styled.div`

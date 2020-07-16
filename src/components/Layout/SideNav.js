@@ -10,13 +10,24 @@ export const SideNav = ({ navState }) => {
   return (
     <Drawer open={navState}>
       <Nav>
-        <Link to="/projects">PROJECTS</Link>
-        <Link to="/about">ABOUT</Link>
-        <Link to="/contact">CONTACT</Link>
+        <Link to="/projects" activeStyle={activeNavStyles}>
+          PROJECTS
+        </Link>
+        <Link to="/about" activeStyle={activeNavStyles}>
+          ABOUT
+        </Link>
+        <Link to="/contact" activeStyle={activeNavStyles}>
+          CONTACT
+        </Link>
       </Nav>
       <FooterLinks placement="sideNav"></FooterLinks>
     </Drawer>
   )
+}
+
+const activeNavStyles = {
+  fontWeight: "bold",
+  color: "#aaa",
 }
 
 const Drawer = styled.div`
