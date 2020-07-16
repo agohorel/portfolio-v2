@@ -19,7 +19,7 @@ export const Layout = ({ children, location }) => {
 
   return (
     <LayoutContainer>
-      <Head title={routes[location.pathname]}></Head>
+      <Head title={routes[location?.pathname]}></Head>
       <HeaderContainer>
         <Header></Header>
         <Navigation></Navigation>
