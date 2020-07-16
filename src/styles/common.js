@@ -22,6 +22,7 @@ export const ExtLink = styled.a`
 
 export const Centered = styled.div`
   display: flex;
+  flex-direction: ${props => (props.column ? "column" : "row")};
   justify-content: center;
   align-items: center;
 `
