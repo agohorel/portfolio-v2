@@ -1,31 +1,47 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithubSquare,
   faLinkedin,
   faTwitterSquare,
-  faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons"
 
 export const FooterLinks = ({ placement, location }) => {
   if (location?.pathname) {
     return (
       <Container placement={placement} location={location.pathname}>
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
+        <IconLink
+          href="https://github.com/agohorel"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon icon={faGithubSquare}></Icon>
         </IconLink>
 
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
+        <IconLink
+          href="https://www.linkedin.com/in/alex-gohorel/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon icon={faLinkedin}></Icon>
         </IconLink>
 
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
+        <IconLink
+          href="https://twitter.com/AGohorel"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon icon={faTwitterSquare}></Icon>
         </IconLink>
 
-        <IconLink href="#" target="_blank" rel="noopener noreferrer">
-          <Icon icon={faInstagramSquare}></Icon>
+        <IconLink
+          href="mailto:gohorelalex@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon icon={faEnvelopeSquare}></Icon>
         </IconLink>
       </Container>
     )
