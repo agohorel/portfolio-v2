@@ -17,16 +17,22 @@ const Type = styled.h1`
   margin-bottom: 3px;
 
   :before {
-    content: "ALEX GOHOREL | SOFTWARE ENGINEER & AUDIOVISUAL DESIGNER";
+    content: "ALEX GOHOREL | FULL STACK SOFTWARE ENGINEER";
   }
 
   @media (max-width: 847px) {
     :before {
-      content: "ALEX GOHOREL | DEV & A/V";
+      content: "ALEX GOHOREL | SOFTWARE ENGINEER";
     }
   }
 
-  @media (max-width: 426px) {
+  @media (max-width: 545px) {
+    :before {
+      content: "ALEX GOHOREL | DEVELOPER";
+    }
+  }
+
+  @media (max-width: 440px) {
     :before {
       content: "ALEX GOHOREL";
     }
