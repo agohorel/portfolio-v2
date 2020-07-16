@@ -10,16 +10,14 @@ import { FooterLinks } from "./FooterLinks"
 const footerPaths = ["/", "/contact"]
 
 export const Layout = ({ children, location }) => {
-  const routes = {
-    "/": "home",
-    "/about": "about",
-    "/projects": "projects",
-    "/contact": "contact",
+  const setSiteTitle = location => {
+    const path = location?.pathname
+    return path === "/" ? "home" : path.replace(/\//g, "")
   }
 
   return (
     <LayoutContainer>
-      <Head title={routes[location?.pathname]}></Head>
+      <Head title={setSiteTitle(location)}></Head>
       <HeaderContainer>
         <Header></Header>
         <Navigation></Navigation>

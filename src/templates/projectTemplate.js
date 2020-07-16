@@ -14,12 +14,12 @@ import { Layout } from "../components/Layout/Layout"
 import { ToolsUsed } from "../components/Portfolio/ToolsUsed"
 import { ExtLink, StyledLink } from "../styles/common"
 
-export default function projectTemplate({ data, pageContext }) {
+export default function projectTemplate({ data, pageContext, location }) {
   const { markdownRemark } = data
   const { frontmatter: project } = markdownRemark
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Title>{project.name.replace(/ /g, "_")}</Title>
 
       <ProjectContainer>
