@@ -26,17 +26,17 @@ const ContactForm = ({ location }) => {
           <PageTitle>contact</PageTitle>
           <FormGroup>
             <label htmlFor="name">name</label>
-            <FormInput type="text" name="name" required />
+            <FormInput type="text" name="name" id="name" required />
           </FormGroup>
 
           <FormGroup>
             <label htmlFor="_replyto">email</label>
-            <FormInput type="email" name="_replyto" required />
+            <FormInput type="email" name="_replyto" id="_replyto" required />
           </FormGroup>
 
           <FormGroup>
             <label htmlFor="body">message</label>
-            <FormTextArea type="text" name="body" rows="6" required />
+            <FormTextArea type="text" name="body" id="body" rows="6" required />
           </FormGroup>
 
           <FormGroup>
