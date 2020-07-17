@@ -10,7 +10,7 @@ export const ProjectCard = ({ data }) => {
 
   return (
     <Card>
-      <Link to={project.path}>
+      <Link to={project.path} aria-label={project.name}>
         <ImageContainer>
           <Image fluid={project.thumbnail?.childImageSharp.fluid}></Image>
         </ImageContainer>
