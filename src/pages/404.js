@@ -21,7 +21,6 @@ export default function about({ location }) {
 }
 
 const AsciiArt = styled.pre`
-  margin: 4rem 0;
   font-size: calc(0.175vw + 0.25px);
-  letter-spacing: 0.01vw;
+  transform: scale(0.8);
 `
