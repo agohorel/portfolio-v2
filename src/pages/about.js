@@ -84,6 +84,11 @@ const Frame = styled.div`
   width: 20vw;
   filter: grayscale(1);
   clip-path: circle(10vw at center);
+  transition: 0.2s ease-out filter;
+
+  :hover {
+    filter: grayscale(0);
+  }
 
   @media (max-width: 1300px) {
     width: 32vw;
@@ -186,7 +191,7 @@ export const pageQuery = graphql`
             }
             portrait {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1100, quality: 50) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
