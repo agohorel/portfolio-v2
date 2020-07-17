@@ -16,6 +16,7 @@ export const FooterLinks = ({ placement, location }) => {
           href="https://github.com/agohorel"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="github"
         >
           <Icon icon={faGithubSquare}></Icon>
         </IconLink>
@@ -24,6 +25,7 @@ export const FooterLinks = ({ placement, location }) => {
           href="https://www.linkedin.com/in/alex-gohorel/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="linkedin"
         >
           <Icon icon={faLinkedin}></Icon>
         </IconLink>
@@ -32,6 +34,7 @@ export const FooterLinks = ({ placement, location }) => {
           href="https://twitter.com/AGohorel"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="twitter"
         >
           <Icon icon={faTwitterSquare}></Icon>
         </IconLink>
@@ -40,6 +43,7 @@ export const FooterLinks = ({ placement, location }) => {
           href="mailto:gohorelalex@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="email"
         >
           <Icon icon={faEnvelopeSquare}></Icon>
         </IconLink>

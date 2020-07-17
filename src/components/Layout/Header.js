@@ -5,7 +5,7 @@ import { StyledLink } from "../../styles/common"
 
 export const Header = () => {
   return (
-    <StyledLink to="/">
+    <StyledLink to="/" aria-label="home">
       <Type></Type>
     </StyledLink>
   )
