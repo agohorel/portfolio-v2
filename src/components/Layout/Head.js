@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 export const Head = ({ title }) => {
   return (
     <Helmet title={`agohorel | ${title}`}>
+      <html lang="en"></html>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
