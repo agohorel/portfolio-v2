@@ -11,12 +11,14 @@ portrait: /assets/wedding-cheesin-square-crop.jpg
 skills:
   - skill_name: javascript
     icon: /assets/javascript.svg
+  - skill_name: typescript
+    icon: /assets/typescript.svg
   - skill_name: python
     icon: /assets/python.svg
-  - skill_name: react
-    icon: /assets/react.svg
   - skill_name: node.js
     icon: /assets/nodejs.svg
+  - skill_name: react
+    icon: /assets/react.svg
   - skill_name: electron
     icon: /assets/electron.svg
   - skill_name: redux
@@ -41,4 +43,10 @@ skills:
     icon: /assets/less.svg
   - skill_name: react native
     icon: /assets/react.svg
+  - skill_name: nest.js
+    icon: /assets/nestjs.svg
+  - skill_name: next.js
+    icon: /assets/nextjs.svg
+  - skill_name: lit
+    icon: /assets/lit.svg
 ---
