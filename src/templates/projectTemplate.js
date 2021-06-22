@@ -62,16 +62,19 @@ export default function projectTemplate({ data, pageContext, location }) {
               <Spacer></Spacer>
             )}
 
-            <div>
-              <Link
-                href={project.repo_url}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <Icon icon={faCodeBranch}></Icon>
-                repo
-              </Link>
-            </div>
+            {project.repo_url !== "N/A" && (
+              <div>
+                <Link
+                  href={project.repo_url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Icon icon={faCodeBranch}></Icon>
+                  repo
+                </Link>
+              </div>
+            )}
+              
           </Links>
 
           {project.description
