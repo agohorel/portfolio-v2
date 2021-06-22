@@ -25,7 +25,11 @@ frontend_tools:
   - redux-saga
   - styled-components
 other_tools:
-  - N/A
+  - socket.io
+  - twilio
+  - sendgrid
+  - hellosign
+  - husky
 demo_url: N/A
 repo_url: N/A
 image:
