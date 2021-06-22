@@ -24,6 +24,8 @@ frontend_tools:
   - redux-toolkit
   - redux-saga
   - styled-components
+other_tools:
+  - N/A
 demo_url: N/A
 repo_url: N/A
 image:
