@@ -167,6 +167,7 @@ const Links = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 2rem;
+  justify-items: center;
 `
 
 const LinkStyles = `
