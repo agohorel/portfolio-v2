@@ -164,8 +164,8 @@ const Description = styled.p`
 `
 
 const Links = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 2rem;
 `
 
