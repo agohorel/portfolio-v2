@@ -1,5 +1,5 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, { useEffect, useCallback } from "react"
+import { graphql, navigate } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -14,9 +14,39 @@ import { Layout } from "../components/Layout/Layout"
 import { ToolsUsed } from "../components/Portfolio/ToolsUsed"
 import { ExtLink, StyledLink } from "../styles/common"
 
-export default function projectTemplate({ data, pageContext, location }) {
+export default function ProjectTemplate({ data, pageContext, location }) {
   const { markdownRemark } = data
   const { frontmatter: project } = markdownRemark
+
+  const keyboardNavigation = useCallback(
+    e => {
+      const goToPreviousItem = () => {
+        navigate(pageContext.prev.node.frontmatter.path)
+      }
+
+      const goToNextItem = () => {
+        navigate(pageContext.next.node.frontmatter.path)
+      }
+
+      switch (e.key) {
+        case "ArrowLeft":
+          goToPreviousItem()
+          break
+        case "ArrowRight":
+          goToNextItem()
+          break
+        default:
+          break
+      }
+    },
+    [pageContext]
+  )
+
+  useEffect(() => {
+    document.addEventListener("keydown", keyboardNavigation)
+
+    return () => document.removeEventListener("keydown", keyboardNavigation)
+  }, [keyboardNavigation])
 
   return (
     <Layout location={location}>
@@ -74,7 +104,6 @@ export default function projectTemplate({ data, pageContext, location }) {
                 </Link>
               </div>
             )}
-              
           </Links>
 
           {project.description
