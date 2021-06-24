@@ -1,5 +1,6 @@
 ---
 type: portfolio
+order: "3"
 path: /aleph
 date: 2020-05-03T19:02:04.920Z
 name: aleph
