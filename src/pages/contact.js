@@ -20,7 +20,7 @@ const ContactForm = ({ location }) => {
       <Centered>
         <StyledForm
           height={height}
-          action="https://formspree.io/gohorelalex@gmail.com"
+          action="https://formspree.io/f/xpzklzwn"
           method="POST"
         >
           <PageTitle>contact</PageTitle>
