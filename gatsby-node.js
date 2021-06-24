@@ -42,12 +42,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     {
       allMarkdownRemark(
         filter: { frontmatter: { type: { eq: "portfolio" } } }
+        sort: { fields: frontmatter___order }
       ) {
         edges {
           node {
             frontmatter {
               type
-              title
               repo_url
               backend_tools
               frontend_tools
@@ -101,7 +101,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: projectTemplate,
       context: {
         index,
-        prev: allProjects[index - 1] || allProjects[allProjects.length-1],
+        prev: allProjects[index - 1] || allProjects[allProjects.length - 1],
         next: allProjects[index + 1] || allProjects[0],
       },
     })

@@ -21,7 +21,10 @@ export default function devProjects({ data, location }) {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "portfolio" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "portfolio" } } }
+      sort: { fields: frontmatter___order }
+    ) {
       nodes {
         frontmatter {
           name
