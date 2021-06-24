@@ -20,6 +20,7 @@ collections:
     create: true
     fields:
       - { name: type, label: Post Type, default: portfolio }
+      - { name: order, label: Post Order }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: name, label: Name }
