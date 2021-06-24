@@ -1,5 +1,6 @@
 ---
 type: portfolio
+order: "6"
 path: /symphinity
 date: 2020-07-07T19:22:47.825Z
 name: symphinity
