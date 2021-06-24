@@ -1,5 +1,6 @@
 ---
 type: portfolio
+order: "7"
 path: /bend
 date: 2020-07-09T19:34:59.853Z
 name: bend
