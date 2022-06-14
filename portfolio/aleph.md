@@ -24,7 +24,7 @@ frontend_tools:
   - vanilla javascript
 other_tools:
   - N/A
-demo_url: https://www.aleph.zone
+demo_url: https://agohorel.github.io/aleph-site/
 repo_url: https://www.github.com/agohorel/aleph
 image:
   - /assets/aleph-screencap.png
