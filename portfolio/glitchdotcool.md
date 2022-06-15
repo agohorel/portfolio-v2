@@ -12,10 +12,10 @@ description: >-
   design.
 
 
-  Our website is a progressive web app built w/ Gatsby and deployed w/ continuous integration to Netlify. We currently have 15 contributors to the site who post content using Strapi CMS. I also set up Matomo, an open source privacy-respecting analytics solution, which runs on a LAMP (Linux, Apache, MySQL, PHP) stack deployed to Linode. To date the site has attracted over 20k visitors and has served over 4k downloads of our royalty-free sample packs.
+  Our website is a progressive web app built w/ Gatsby and deployed w/ continuous integration to Netlify. We currently have 15 contributors to the site who post content using Strapi CMS. I also set up Matomo, an open source privacy-respecting analytics solution, which runs on a LAMP (Linux, Apache, MySQL, PHP) stack deployed to Linode. To date the site has attracted over 35k visitors and has served over 5k downloads of our royalty-free sample packs.
 
 
-  We also have an active Discord server w/ over 750 members which I developed a node.js-based bot for. 
+  We also have an active Discord server w/ over 1.3k members which I developed a custom node.js-based bot for.
 short_description: full-stack web app for a multidisciplinary arts collective
 backend_tools:
   - node.js
