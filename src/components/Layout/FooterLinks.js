@@ -2,11 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons"
-import {
-  faGithubSquare,
-  faLinkedin,
-  faTwitterSquare,
-} from "@fortawesome/free-brands-svg-icons"
+import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 export const FooterLinks = ({ placement, location }) => {
   if (location?.pathname) {
@@ -28,15 +24,6 @@ export const FooterLinks = ({ placement, location }) => {
           aria-label="linkedin"
         >
           <Icon icon={faLinkedin}></Icon>
-        </IconLink>
-
-        <IconLink
-          href="https://twitter.com/AGohorel"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="twitter"
-        >
-          <Icon icon={faTwitterSquare}></Icon>
         </IconLink>
 
         <IconLink
