@@ -36,8 +36,8 @@ frontend_tools:
 other_tools:
   - certbot
   - nginx
-demo_url: https://github.com/glitch-dot-cool/paint-with-friends
-repo_url: https://paint.glitch.cool/paint.html
+demo_url: https://paint.glitch.cool/
+repo_url: https://github.com/glitch-dot-cool/paint-with-friends
 image:
   - /assets/sortme.png
 ---
